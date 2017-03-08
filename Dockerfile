@@ -8,6 +8,9 @@ RUN echo "deb http://ppa.launchpad.net/ansible/ansible/ubuntu trusty main" >> /e
 	&& apt-get install -y --no-install-recommends \
 		ansible \
 		nodejs \
+		curl \
+		php5-cli \
+	&& curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer \
 	&& npm install -g npm \
 	&& npm install -g bower gulp \
 	&& rm -rf /var/lib/apt/lists/* \
