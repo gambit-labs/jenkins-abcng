@@ -21,3 +21,4 @@ RUN apt-get update \
     # cleanup
     && apt-get clean
 USER jenkins
+ENV DOTNET_CLI_TELEMETRY_OPTOUT=1
