@@ -10,8 +10,5 @@ RUN	apt-get update \
 	&& curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer \
 	&& rm -rf /var/lib/apt/lists/* \
 	# cleanup
-	&& apt-get purge -y \
-		bzip2 \
-		unzip \
-		xz-utils
+	&& apt-get clean
 USER jenkins
