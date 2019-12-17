@@ -18,7 +18,7 @@ RUN apt-get update \
     && chown root:root /etc/apt/trusted.gpg.d/microsoft.asc.gpg \
     && chown root:root /etc/apt/sources.list.d/microsoft-prod.list \
     && apt-get update \
-    && apt-get install -y dotnet-sdk-2.2 \
+    && apt-get install -y dotnet-sdk-3.1 \
     && curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer \
     && rm -rf /var/lib/apt/lists/* \
     # cleanup
